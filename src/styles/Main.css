@@ -1,0 +1,33 @@
+.search-container {
+  padding-top: 250px;
+  height: 100%;
+  background-color: "black";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+}
+
+.list {
+  text-align: center;
+}
+
+input {
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  width: 100%;
+}

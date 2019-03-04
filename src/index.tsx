@@ -10,7 +10,7 @@ import { player } from "./reducers/index";
 import { StoreState } from "./types/index";
 
 const store = createStore<StoreState, any, any, any>(player, {
-  playerID: 1
+  playerID: ""
 });
 
 ReactDOM.render(

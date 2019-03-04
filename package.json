@@ -4,14 +4,22 @@
   "private": true,
   "dependencies": {
     "@types/react-redux": "^7.0.1",
+    "@types/react-router-dom": "^4.3.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "json-loader": "^0.5.7",
+    "mysql": "^2.16.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts-ts": "3.1.0",
     "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
+    "start-server": "node src/server.js",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"

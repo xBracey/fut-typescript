@@ -1,12 +1,18 @@
 import * as React from "react";
-import "./App.css";
-import Hello from "./containers/Hello";
+import Main from "./containers/Main";
+import Player from "./containers/Player";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <Hello />
+        <Router>
+          <div>
+            <Route path="/" exact component={Main} />
+            <Route path="/player" exact component={Player} />
+          </div>
+        </Router>
       </div>
     );
   }

@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 
 export interface Props {
-  setPlayerid: (playerID: String) => void;
-  playerID: String;
+  setPlayerid: (playerID: string) => void;
+  playerID: string;
 }
 
 export interface State {
-  searchTerm: String;
+  searchTerm: string;
   data: Object[];
 }
 
@@ -35,7 +35,7 @@ class HelloContainer extends React.Component<Props, State> {
       });
   };
 
-  onPlayerClicked(id: String) {
+  onPlayerClicked(id: string) {
     this.props.setPlayerid(id);
   }
 
@@ -61,7 +61,7 @@ class HelloContainer extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className="search-container">
+      <div className="container">
         <img src={logo} className="logo" />
         <input
           onInput={(e: any) => {
@@ -83,7 +83,7 @@ export function mapStateToProps({ playerID }: StoreState) {
 
 export function mapDispatchToProps(dispatch: Dispatch<actions.playerActions>) {
   return {
-    setPlayerid: (playerID: String) => dispatch(actions.setPlayerid(playerID))
+    setPlayerid: (playerID: string) => dispatch(actions.setPlayerid(playerID))
   };
 }
 

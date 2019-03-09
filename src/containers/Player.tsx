@@ -5,6 +5,10 @@ import { PlayerType, StoreState } from "../types/index";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
+import gold from "../images/gold.png";
+import silver from "../images/silver.png";
+import bronze from "../images/bronze.png";
+
 export interface Props {
   playerID: "";
 }
@@ -124,7 +128,31 @@ class Player extends React.Component<Props, State> {
   }
   render() {
     const { data } = this.state;
-    return <div className="player-container">{data.Name}</div>;
+    let photo = bronze;
+    console.log(parseInt(data.Overall));
+    if (parseInt(data.Overall) > 74) {
+      photo = gold;
+    } else if (parseInt(data.Overall) > 64) {
+      photo = silver;
+    }
+
+    console.log(data);
+
+    return (
+      <div className="container">
+        <div
+          style={{ backgroundImage: `url(${photo})` }}
+          className="card-photo"
+        >
+          <img className="flag" src={decodeURIComponent(data.Flag)} />
+          <img className="club-logo" src={decodeURIComponent(data.Club_Logo)} />
+          <img className="photo" src={decodeURIComponent(data.Photo)} />
+          <p className="overall"> {data.Overall} </p>
+          <p className="position"> {data.Position} </p>
+          <p className="name"> {data.Name} </p>
+        </div>
+      </div>
+    );
   }
 }
 

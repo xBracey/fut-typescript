@@ -7,7 +7,6 @@ import { Dispatch } from "redux";
 import { Link } from "react-router-dom";
 
 import logo from "../images/logo.png";
-import "../styles/Main.css";
 
 export interface Props {
   setPlayerid: (playerID: String) => void;

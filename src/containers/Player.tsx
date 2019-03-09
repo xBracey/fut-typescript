@@ -5,8 +5,6 @@ import { PlayerType, StoreState } from "../types/index";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
-import "../styles/Main.css";
-
 export interface Props {
   playerID: "";
 }

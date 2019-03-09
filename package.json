@@ -10,6 +10,7 @@
     "express": "^4.16.4",
     "json-loader": "^0.5.7",
     "mysql": "^2.16.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",

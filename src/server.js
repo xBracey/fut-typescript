@@ -6,10 +6,10 @@ const playerArray = require("./data/fut.json");
 
 // https://github.com/mysqljs/mysql
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "fut_db"
+  host: "216.51.232.63",
+  user: "a8562_admin",
+  password: "5dhMXu5#g2",
+  database: "a8562_fut_db"
 });
 
 // Initialize the app
@@ -43,6 +43,6 @@ app.get("/player", function(req, res) {
 });
 
 // Start the server
-app.listen(3001, () => {
-  console.log("Go to http://localhost:3001`/posts to see posts");
+app.listen(80, () => {
+  console.log("Go to http://localhost/");
 });

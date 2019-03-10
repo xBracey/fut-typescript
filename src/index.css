@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.container {
+  padding-top: 100px;
+  height: 100%;
+  background-color: "black";
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.logo {
+  height: 100px; }
+
+.list {
+  text-align: center; }
+
+input {
+  margin: 10px; }
+
+button {
+  margin: 10px; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+li {
+  width: 100%; }
+
+p {
+  font-family: "Roboto"; }
+
+.card-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 410px;
+  width: 270px;
+  position: relative; }
+
+.flag {
+  position: absolute;
+  top: 132px;
+  left: 42px;
+  width: 45px; }
+
+.club-logo {
+  position: absolute;
+  top: 171px;
+  left: 42px;
+  width: 45px; }
+
+.photo {
+  position: absolute;
+  height: 150px;
+  top: 69px;
+  right: 22px; }
+
+.overall {
+  font-size: 45px;
+  position: absolute;
+  top: -5px;
+  left: 42px; }
+
+.position {
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+  top: 65px;
+  left: 51px; }
+
+.name {
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  top: 190px;
+  right: 0;
+  left: 0;
+  text-align: center; }

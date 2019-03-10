@@ -43,6 +43,6 @@ app.get("/player", function(req, res) {
 });
 
 // Start the server
-app.listen(80, () => {
+app.listen(3000, () => {
   console.log("Go to http://localhost/");
 });

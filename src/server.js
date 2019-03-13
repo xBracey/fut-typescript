@@ -6,10 +6,10 @@ const playerArray = require("./data/fut.json");
 
 // https://github.com/mysqljs/mysql
 const connection = mysql.createConnection({
-  host: "216.51.232.63",
-  user: "a8562_admin",
-  password: "5dhMXu5#g2",
-  database: "a8562_fut_db"
+  host: "localhost",
+  user: "root",
+  password: "v94d$rJnE3mizTg",
+  database: "fut_db"
 });
 
 // Initialize the app

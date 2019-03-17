@@ -1,0 +1,94 @@
+.header-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    height: 180px;
+  }
+}
+
+.header-rect {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  background-color: #8cc0dc;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    height: 180px;
+  }
+}
+
+.header-drop {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-circle {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background: #8cc0dc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -moz-transform: scaleX(3.5);
+  -webkit-transform: scaleX(3.5);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 25px;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  background-color: #256c92;
+  z-index: 2;
+
+  p {
+    margin: 0;
+    padding-right: 8px;
+    color: #fff;
+    text-align: center;
+    font-family: "Salsa";
+    font-size: 72px;
+    letter-spacing: -0.15em;
+  }
+}
+
+.header-menu-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #8cc0dc;
+  align-items: center;
+
+  p {
+    color: #256c92;
+    margin: 15px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  @media (max-width: 767px) {
+    position: relative;
+    top: 0px;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.header-menu-spacing {
+  letter-spacing: 0.05em;
+}

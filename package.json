@@ -51,7 +51,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "parallelshell \"node scripts/start.js\" \"node-sass src/index.scss src/index.css -w\"",
     "start-server": "node src/server.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
@@ -63,6 +63,7 @@
     "@types/react-dom": "^16.8.2",
     "css-loader": "^0.28.7",
     "node-sass": "^4.11.0",
+    "react-pose": "^4.0.8",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.19.0",
     "typescript": "^3.3.3333",

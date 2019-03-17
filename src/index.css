@@ -1,20 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Salsa");
+body {
+  margin: 0;
+  background-color: #c1e0f1; }
+
+a {
+  text-decoration: none; }
+
+.page-container {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .page-container {
+      flex-direction: column; } }
+
 .container {
-  padding-top: 100px;
-  height: 100%;
-  background-color: "black";
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (min-width: 768px) {
+    .container {
+      min-height: 600px; } }
 
-.logo {
+.fut-logo {
   height: 100px; }
 
 .list {
   text-align: center; }
 
 input {
-  margin: 10px; }
+  height: 20px;
+  margin: 10px;
+  font-size: 16px; }
 
 button {
   margin: 10px; }
@@ -37,16 +55,22 @@ p {
   width: 270px;
   position: relative; }
 
-.flag {
+.flag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
-  top: 132px;
+  top: 45px;
   left: 42px;
+  height: 168px; }
+  .flag-container p {
+    margin: 0; }
+
+.flag {
   width: 45px; }
 
 .club-logo {
-  position: absolute;
-  top: 171px;
-  left: 42px;
   width: 45px; }
 
 .photo {
@@ -56,23 +80,111 @@ p {
   right: 22px; }
 
 .overall {
-  font-size: 45px;
-  position: absolute;
-  top: -5px;
-  left: 42px; }
+  font-size: 45px; }
 
 .position {
   font-weight: bold;
-  font-size: 25px;
-  position: absolute;
-  top: 65px;
-  left: 51px; }
+  font-size: 25px; }
 
 .name {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
+  white-space: nowrap;
   position: absolute;
-  top: 190px;
+  top: 200px;
   right: 0;
   left: 0;
   text-align: center; }
+
+.stats-container {
+  position: absolute;
+  display: flex;
+  top: 250px;
+  left: 30px;
+  right: 0; }
+  .stats-container p {
+    font-size: 16px; }
+
+.stats-sub-container {
+  flex: 1;
+  margin-left: 15px; }
+
+.header-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .header-container {
+      height: 180px; } }
+
+.header-rect {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  background-color: #8cc0dc;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .header-rect {
+      height: 180px; } }
+
+.header-drop {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.header-circle {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background: #8cc0dc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -moz-transform: scaleX(3.5);
+  -webkit-transform: scaleX(3.5); }
+  @media (max-width: 767px) {
+    .header-circle {
+      display: none; } }
+
+.logo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 25px;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  background-color: #256c92;
+  z-index: 2; }
+  .logo p {
+    margin: 0;
+    padding-right: 8px;
+    color: #fff;
+    text-align: center;
+    font-family: "Salsa";
+    font-size: 72px;
+    letter-spacing: -0.15em; }
+
+.header-menu-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #8cc0dc;
+  align-items: center; }
+  .header-menu-container p {
+    color: #256c92;
+    margin: 15px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 30px; }
+  @media (max-width: 767px) {
+    .header-menu-container {
+      position: relative;
+      top: 0px;
+      flex-direction: column;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); } }
+
+.header-menu-spacing {
+  letter-spacing: 0.05em; }

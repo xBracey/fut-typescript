@@ -1,8 +1,9 @@
 import * as React from "react";
-import Main from "./containers/Main";
-import Player from "./containers/Player";
+import Main from "./containers/main";
+import Fut from "./containers/fut";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./index.css";
+import Header from "./components/header";
 
 class App extends React.Component {
   public render() {
@@ -10,8 +11,9 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <div>
+            <Header />
             <Route path="/" exact component={Main} />
-            <Route path="/player" exact component={Player} />
+            <Route path="/fut" exact component={Fut} />
           </div>
         </Router>
       </div>

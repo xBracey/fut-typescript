@@ -186,5 +186,10 @@ p {
       flex-direction: column;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); } }
 
+@media (max-width: 767px) {
+  .header-menu {
+    width: 100%;
+    text-align: center; } }
+
 .header-menu-spacing {
   letter-spacing: 0.05em; }

@@ -1,8 +1,28 @@
 body {
   margin: 0;
-  background-color: #c1e0f1;
+  background-color: $light1;
 }
 
 a {
   text-decoration: none;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    min-height: 600px;
+  }
 }

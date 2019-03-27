@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Salsa");
 body {
   margin: 0;
-  background-color: #c1e0f1; }
+  background-color: #b3c4ee; }
 
 a {
   text-decoration: none; }
@@ -15,7 +15,7 @@ a {
       flex-direction: column; } }
 
 .container {
-  padding-top: 50px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -123,7 +123,7 @@ p {
   position: absolute;
   top: 0;
   height: 120px;
-  background-color: #8cc0dc;
+  background-color: #829bd9;
   width: 100%; }
   @media (max-width: 767px) {
     .header-rect {
@@ -136,7 +136,7 @@ p {
   border-radius: 50%;
   width: 180px;
   height: 180px;
-  background: #8cc0dc;
+  background: #829bd9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -moz-transform: scaleX(3.5);
   -webkit-transform: scaleX(3.5); }
@@ -153,7 +153,7 @@ p {
   height: 125px;
   width: 125px;
   border-radius: 50%;
-  background-color: #256c92;
+  background-color: #20449e;
   z-index: 2; }
   .logo p {
     margin: 0;
@@ -171,10 +171,10 @@ p {
   right: 0;
   display: flex;
   justify-content: center;
-  background-color: #8cc0dc;
+  background-color: #829bd9;
   align-items: center; }
   .header-menu-container p {
-    color: #256c92;
+    color: #20449e;
     margin: 15px;
     font-family: "Roboto";
     font-weight: bold;

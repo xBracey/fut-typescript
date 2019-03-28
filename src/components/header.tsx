@@ -1,6 +1,7 @@
 import * as React from "react";
 import posed from "react-pose";
 import { Link } from "react-router-dom";
+import { MenuItemType } from "../types";
 
 export interface Props {}
 
@@ -15,6 +16,39 @@ export default class Header extends React.Component<Props, State> {
       logoClicked: false
     };
   }
+
+  componentDidMount() {
+    if (window.innerWidth > 768) {
+      setTimeout(() => {
+        this.setState({
+          logoClicked: true
+        });
+      }, 400);
+    }
+  }
+
+  menu = [
+    {
+      link: "/",
+      name: "Home"
+    },
+    {
+      link: "/about",
+      name: "About Me"
+    },
+    {
+      link: "/",
+      name: ""
+    },
+    {
+      link: "/fut",
+      name: "Projects"
+    },
+    {
+      link: "/blog",
+      name: "Blog"
+    }
+  ];
 
   LogoBox = posed.div({
     hoverable: true,
@@ -34,11 +68,11 @@ export default class Header extends React.Component<Props, State> {
     normal: {
       opacity: 0,
       padding: "0px 0px",
-      margin: window.innerWidth > 768 ? "0px 0px" : "-50px 0px"
+      margin: window.innerWidth > 768 ? "0px -100px" : "-50px 0px"
     },
     clicked: {
       opacity: 1,
-      padding: window.innerWidth > 768 ? "0px 110px" : "0px 0px",
+      padding: window.innerWidth > 768 ? "0px 0px" : "0px 0px",
       margin: "0px 0px"
     }
   });
@@ -51,28 +85,22 @@ export default class Header extends React.Component<Props, State> {
 
   renderMenu() {
     const { logoClicked } = this.state;
-
-    return (
-      <div className="header-menu-container">
+    const menuComponent = this.menu.map((menuItem: MenuItemType) => {
+      const headerMenuEmpty = menuItem.name ? "" : "header-menu-empty";
+      return (
         <this.MenuBox
-          className="header-menu"
+          className={"header-menu " + headerMenuEmpty}
           pose={logoClicked ? "clicked" : "normal"}
         >
-          <Link to="/">
-            <p> About Me </p>
+          <Link to={menuItem.link}>
+            <p>{menuItem.name}</p>
           </Link>
         </this.MenuBox>
+      );
+    });
+    console.log(menuComponent);
 
-        <this.MenuBox
-          className="header-menu"
-          pose={logoClicked ? "clicked" : "normal"}
-        >
-          <Link to="/fut">
-            <p className="header-menu-spacing"> Projects </p>
-          </Link>
-        </this.MenuBox>
-      </div>
-    );
+    return <div className="header-menu-container">{menuComponent}</div>;
   }
 
   render() {

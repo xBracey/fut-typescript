@@ -90,12 +90,19 @@
 }
 
 .header-menu {
+  text-align: center;
+  width: 200px;
   @media (max-width: 767px) {
     width: 100%;
-    text-align: center;
   }
 }
 
 .header-menu-spacing {
   letter-spacing: 0.05em;
+}
+
+.header-menu-empty {
+  @media (max-width: 767px) {
+    display: none;
+  }
 }

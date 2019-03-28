@@ -21,8 +21,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
+  padding: 0px calc(50vw - 400px);
+}
 
-  @media (min-width: 768px) {
-    min-height: 600px;
-  }
+.home-text {
+  font-size: 32px;
+  padding: 20px;
+  font-family: "Salsa";
+  text-align: center;
 }

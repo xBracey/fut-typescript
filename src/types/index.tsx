@@ -31,3 +31,8 @@ export interface PlayerType {
   ClubPic: string;
   PlayerPic: string;
 }
+
+export interface MenuItemType {
+  link: string;
+  name: string;
+}

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Salsa");
 body {
   margin: 0;
-  background-color: #b3c4ee; }
+  background-color: #646d90; }
 
 a {
   text-decoration: none; }
@@ -18,10 +18,15 @@ a {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  @media (min-width: 768px) {
-    .container {
-      min-height: 600px; } }
+  align-items: center;
+  max-width: 800px;
+  padding: 0px calc(50vw - 400px); }
+
+.home-text {
+  font-size: 32px;
+  padding: 20px;
+  font-family: "Salsa";
+  text-align: center; }
 
 .fut-logo {
   height: 100px; }
@@ -123,7 +128,7 @@ p {
   position: absolute;
   top: 0;
   height: 120px;
-  background-color: #829bd9;
+  background-color: #485174;
   width: 100%; }
   @media (max-width: 767px) {
     .header-rect {
@@ -136,7 +141,7 @@ p {
   border-radius: 50%;
   width: 180px;
   height: 180px;
-  background: #829bd9;
+  background: #485174;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -moz-transform: scaleX(3.5);
   -webkit-transform: scaleX(3.5); }
@@ -153,7 +158,7 @@ p {
   height: 125px;
   width: 125px;
   border-radius: 50%;
-  background-color: #20449e;
+  background-color: #101a3e;
   z-index: 2; }
   .logo p {
     margin: 0;
@@ -171,10 +176,10 @@ p {
   right: 0;
   display: flex;
   justify-content: center;
-  background-color: #829bd9;
+  background-color: #485174;
   align-items: center; }
   .header-menu-container p {
-    color: #20449e;
+    color: #101a3e;
     margin: 15px;
     font-family: "Roboto";
     font-weight: bold;
@@ -186,10 +191,16 @@ p {
       flex-direction: column;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); } }
 
-@media (max-width: 767px) {
-  .header-menu {
-    width: 100%;
-    text-align: center; } }
+.header-menu {
+  text-align: center;
+  width: 200px; }
+  @media (max-width: 767px) {
+    .header-menu {
+      width: 100%; } }
 
 .header-menu-spacing {
   letter-spacing: 0.05em; }
+
+@media (max-width: 767px) {
+  .header-menu-empty {
+    display: none; } }

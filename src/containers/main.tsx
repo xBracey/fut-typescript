@@ -63,6 +63,14 @@ class HelloContainer extends React.Component<Props, State> {
     }
   });
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        homeHeaderVisible: true
+      });
+    }, 1000);
+  }
+
   render() {
     const { homeTextVisible, homeHeaderVisible } = this.state;
 

@@ -1,0 +1,3 @@
+Redirect 302 /projects /?projects
+Redirect 302 /about /?about
+Redirect 302 /blog /?blog

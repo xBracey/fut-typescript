@@ -4,6 +4,7 @@ import Fut from "./containers/fut";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./index.css";
 import Header from "./components/header";
+import Routing from "./components/routing";
 
 class App extends React.Component {
   public render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Header />
+            <Route path="/" component={Routing} />
             <Route path="/" exact component={Main} />
             <Route path="/fut" exact component={Fut} />
           </div>

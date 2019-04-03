@@ -23,6 +23,22 @@ class HelloContainer extends React.Component<Props, State> {
     };
   }
 
+  textInterval = setInterval(() => {
+    const { count, homeTextVisible } = this.state;
+    if (count === homeData.length) {
+      clearInterval(this.textInterval);
+    }
+    homeTextVisible[count] = true;
+    this.setState({
+      homeTextVisible,
+      count: count + 1
+    });
+  }, 2000);
+
+  componentWillUnmount() {
+    clearInterval(this.textInterval);
+  }
+
   HomeText = posed.div({
     hidden: {
       opacity: "0"
@@ -31,20 +47,6 @@ class HelloContainer extends React.Component<Props, State> {
       opacity: "1"
     }
   });
-
-  componentDidMount() {
-    const textInterval = setInterval(() => {
-      const { count, homeTextVisible } = this.state;
-      if (count === homeData.length) {
-        clearInterval(textInterval);
-      }
-      homeTextVisible[count] = true;
-      this.setState({
-        homeTextVisible,
-        count: count + 1
-      });
-    }, 2000);
-  }
 
   render() {
     const { homeTextVisible } = this.state;

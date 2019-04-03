@@ -29,7 +29,7 @@ class HelloContainer extends React.Component<Props, State> {
 
   textInterval = setInterval(() => {
     const { count, homeTextVisible } = this.state;
-    if (count === homeData.length) {
+    if (count === homeData.description.length) {
       clearInterval(this.textInterval);
     }
     homeTextVisible[count] = true;
@@ -51,6 +51,15 @@ class HelloContainer extends React.Component<Props, State> {
     visible: {
       opacity: "1",
       margin: "20px 0px"
+    }
+  });
+
+  HomeText = posed.div({
+    hidden: {
+      opacity: "0"
+    },
+    visible: {
+      opacity: "1"
     }
   });
 

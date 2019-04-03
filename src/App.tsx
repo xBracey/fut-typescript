@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <div>
+          <div className="top-level-container">
             <Header />
             <Route path="/" component={Routing} />
             <Route path="/" exact component={Main} />

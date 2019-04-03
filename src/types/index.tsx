@@ -36,3 +36,9 @@ export interface MenuItemType {
   link: string;
   name: string;
 }
+
+export interface DescriptionItemType {
+  link: string;
+  hoverText: string;
+  text: string;
+}

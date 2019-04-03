@@ -22,11 +22,63 @@ a {
   max-width: 800px;
   padding: 0px calc(50vw - 400px); }
 
+.main-header {
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Roboto"; }
+
+.home-text-link {
+  width: 100%; }
+
+.home-text-container {
+  position: relative;
+  margin: 20px 0;
+  background-color: #485174;
+  border: 5px solid #1d2649;
+  border-radius: 25px;
+  color: #101a3e; }
+
 .home-text {
+  text-transform: capitalize;
   font-size: 32px;
-  padding: 20px;
   font-family: "Salsa";
   text-align: center; }
+
+.home-text-container:hover .home-text-hover-container {
+  opacity: 0.8; }
+
+.home-text-container:hover .home-text {
+  opacity: 0; }
+
+.home-text-hover-container {
+  position: absolute;
+  background-color: #707070;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; }
+  .home-text-hover-container p {
+    text-transform: capitalize;
+    font-size: 32px;
+    font-family: "Salsa"; }
+
+.home-text-arrow-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.home-text-arrow {
+  height: 50px;
+  padding: 10px 15px 0 15px; }
 
 .fut-logo {
   height: 100px; }

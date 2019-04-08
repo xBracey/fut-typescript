@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Salsa");
 body {
   margin: 0;
-  background-color: #646d90; }
+  background-color: #887caf; }
 
 a {
   text-decoration: none; }
+
+p {
+  font-family: "Rubik"; }
+
+h3 {
+  font-family: "Rubik"; }
 
 .page-container {
   display: flex;
@@ -19,6 +26,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1000px;
+  padding: 0px calc(50vw - 500px); }
+
+.main-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 800px;
   padding: 0px calc(50vw - 400px); }
 
@@ -26,34 +41,66 @@ a {
   text-transform: capitalize;
   font-size: 40px;
   font-weight: bold;
-  font-family: "Roboto"; }
+  font-family: "Rubik";
+  color: #13073a;
+  text-align: center;
+  padding: 10px 20px; }
+
+.main-info-container {
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 767px) {
+    .main-info-container {
+      flex-direction: column; } }
 
 .home-text-link {
-  width: 100%; }
+  flex: 1;
+  margin: 20px; }
 
-.home-text-container {
+.container-cyan {
+  background-color: #8080b3;
+  border: 5px solid #09093b;
+  color: #09093b; }
+
+.container-purple {
+  background-color: #8f78ad;
+  border: 5px solid #1c053a;
+  color: #1c053a; }
+
+.home-text-main-container {
   position: relative;
-  margin: 20px 0;
-  background-color: #485174;
-  border: 5px solid #1d2649;
+  padding: 0 20px;
+  height: 100%;
   border-radius: 25px;
-  color: #101a3e; }
-
-.home-text {
-  text-transform: capitalize;
-  font-size: 32px;
-  font-family: "Salsa";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center; }
 
-.home-text-container:hover .home-text-hover-container {
-  opacity: 0.8; }
+.home-text {
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0px 0px 0px; }
 
-.home-text-container:hover .home-text {
+.home-text-main-container:hover .home-text-hover-container {
+  opacity: 1; }
+  .home-text-main-container:hover .home-text-hover-container .home-text {
+    opacity: 1;
+    font-weight: bold; }
+
+.home-text-main-container:hover .home-text {
   opacity: 0; }
+
+.home-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 .home-text-hover-container {
   position: absolute;
-  background-color: #707070;
   border-radius: 25px;
   width: 100%;
   height: 100%;
@@ -61,17 +108,14 @@ a {
   left: 0;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0; }
-  .home-text-hover-container p {
-    text-transform: capitalize;
-    font-size: 32px;
-    font-family: "Salsa"; }
 
 .home-text-arrow-container {
-  height: 100%;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -79,6 +123,47 @@ a {
 .home-text-arrow {
   height: 50px;
   padding: 10px 15px 0 15px; }
+
+.about-header {
+  font-size: 40px;
+  font-weight: bold;
+  color: #13073a;
+  text-align: center;
+  padding: 0px 20px; }
+
+.about-paragraph {
+  font-size: 20px;
+  padding: 0px 20px;
+  margin: 10px 0px;
+  overflow: hidden; }
+
+.about-bullet {
+  margin: 5px 0px; }
+
+.about-bullet-container {
+  position: relative;
+  margin: 0px;
+  height: 100%;
+  width: calc(100% - 10px);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.about-splitter {
+  height: 40px;
+  width: 160px; }
+
+.about-bullet-info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0px; }
+  @media (max-width: 767px) {
+    .about-bullet-info-container {
+      flex-direction: column; } }
 
 .fut-logo {
   height: 100px; }
@@ -102,7 +187,7 @@ li {
   width: 100%; }
 
 p {
-  font-family: "Roboto"; }
+  font-family: "Rubik"; }
 
 .card-photo {
   background-position: center;
@@ -180,7 +265,7 @@ p {
   position: absolute;
   top: 0;
   height: 120px;
-  background-color: #485174;
+  background-color: #615192;
   width: 100%; }
   @media (max-width: 767px) {
     .header-rect {
@@ -193,7 +278,7 @@ p {
   border-radius: 50%;
   width: 180px;
   height: 180px;
-  background: #485174;
+  background: #615192;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -moz-transform: scaleX(3.5);
   -webkit-transform: scaleX(3.5); }
@@ -210,7 +295,7 @@ p {
   height: 125px;
   width: 125px;
   border-radius: 50%;
-  background-color: #101a3e;
+  background-color: #13073a;
   z-index: 2; }
   .logo p {
     margin: 0;
@@ -228,12 +313,12 @@ p {
   right: 0;
   display: flex;
   justify-content: center;
-  background-color: #485174;
+  background-color: #615192;
   align-items: center; }
   .header-menu-container p {
-    color: #101a3e;
+    color: #13073a;
     margin: 15px;
-    font-family: "Roboto";
+    font-family: "Rubik";
     font-weight: bold;
     font-size: 30px; }
   @media (max-width: 767px) {

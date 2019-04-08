@@ -6,5 +6,5 @@ export const aboutData = {
     "This has given me strong foundation for many languages and has given me an insight into both front end and back end development."
   ],
   technologies: ["React", "React-native", "Wordpress", "Redux", "Blade"],
-  languages: ["Javascript", "Typescript", "HTML and CSS/SCSS", "PHP", "MySQL"]
+  languages: ["Javascript", "Typescript", "HTML and CSS/SCSS", "PHP", "SQL"]
 };

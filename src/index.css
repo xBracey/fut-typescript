@@ -140,17 +140,24 @@ h3 {
 .about-bullet {
   margin: 5px 0px; }
 
+.about-bullet-header {
+  margin: 0px 0px 10px 0px; }
+
 .about-bullet-container {
   position: relative;
-  margin: 0px;
+  padding: 20px;
   height: 100%;
-  width: calc(100% - 10px);
+  width: calc(100% - 50px);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center; }
+  @media (max-width: 767px) {
+    .about-bullet-container {
+      margin: 0px 20px;
+      width: calc(100% - 90px); } }
 
 .about-splitter {
   height: 40px;

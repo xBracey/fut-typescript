@@ -25,12 +25,12 @@ class AboutContainer extends React.Component<Props, State> {
     hidden: {
       opacity: "0",
       height: "0px",
-      transition: { duration: 2000 }
+      transition: { duration: 1500 }
     },
     visible: {
       opacity: "1",
       height: "fit-content",
-      transition: { duration: 2000 }
+      transition: { duration: 1500 }
     }
   });
 
@@ -48,17 +48,17 @@ class AboutContainer extends React.Component<Props, State> {
       this.setState({
         aboutHeaderVisible: true
       });
-    }, 800);
+    }, 1000);
     setTimeout(() => {
       this.setState({
         aboutParagraphVisible: true
       });
-    }, 800);
+    }, 1000);
     setTimeout(() => {
       this.setState({
         aboutTablesVisible: true
       });
-    }, 2800);
+    }, 2500);
   }
 
   render() {
@@ -102,12 +102,14 @@ class AboutContainer extends React.Component<Props, State> {
           pose={aboutTablesVisible ? "visible" : "hidden"}
         >
           <div className={"about-bullet-container container-purple"}>
-            <h3 className="about-bullet-header">Technologies</h3>
+            <h3 className="about-bullet-header">
+              Technologies I've worked with
+            </h3>
             {technologies}
           </div>
           <div className="about-splitter " />
           <div className={"about-bullet-container container-cyan"}>
-            <h3 className="about-bullet-header">Languages</h3>
+            <h3 className="about-bullet-header">Languages I've used</h3>
             {languages}
           </div>
         </this.AboutText>

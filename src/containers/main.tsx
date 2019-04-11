@@ -1,9 +1,6 @@
 import * as React from "react";
 
-import * as actions from "../actions/";
-import { StoreState, DescriptionItemType } from "../types/index";
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
+import { DescriptionItemType } from "../types/index";
 import posed from "react-pose";
 import { homeData } from "../data/home";
 import { Link } from "react-router-dom";
@@ -23,7 +20,7 @@ class HelloContainer extends React.Component<Props, State> {
     this.state = {
       homeTextVisible: homeData.description.map(() => false),
       homeHeaderVisible: false,
-      count: 0
+      count: -1
     };
   }
 
@@ -31,13 +28,18 @@ class HelloContainer extends React.Component<Props, State> {
     const { count, homeTextVisible } = this.state;
     if (count === homeData.description.length) {
       clearInterval(this.textInterval);
+    } else if (count === -1) {
+      this.setState({
+        count: count + 1
+      });
+    } else {
+      homeTextVisible[count] = true;
+      this.setState({
+        homeTextVisible,
+        count: count + 1
+      });
     }
-    homeTextVisible[count] = true;
-    this.setState({
-      homeTextVisible,
-      count: count + 1
-    });
-  }, 2000);
+  }, 800);
 
   componentWillUnmount() {
     clearInterval(this.textInterval);
@@ -50,7 +52,7 @@ class HelloContainer extends React.Component<Props, State> {
     },
     visible: {
       opacity: "1",
-      margin: "20px 0px"
+      margin: "0px 0px"
     }
   });
 
@@ -68,7 +70,7 @@ class HelloContainer extends React.Component<Props, State> {
       this.setState({
         homeHeaderVisible: true
       });
-    }, 1000);
+    }, 800);
   }
 
   render() {
@@ -76,19 +78,28 @@ class HelloContainer extends React.Component<Props, State> {
 
     const homeComponent = homeData.description.map(
       (description: DescriptionItemType, index: number) => {
+        const color = index % 2 === 0 ? "container-purple" : "container-cyan";
+
         return (
           <Link to={description.link} className="home-text-link">
             <this.HomeText
-              className={"home-text-container"}
+              className={"home-text-main-container " + color}
               pose={homeTextVisible[index] ? "visible" : "hidden"}
             >
               <div className="home-text-hover-container">
-                <p>{description.hoverText}</p>
+                <div className="home-text-container">
+                  <p className="home-text">{description.hoverText}</p>
+                </div>
                 <div className="home-text-arrow-container">
                   <img className="home-text-arrow" src={arrow} />
                 </div>
               </div>
-              <p className={"home-text"}>{description.text}</p>
+              <div className="home-text-container">
+                <p className={"home-text"}>{description.text}</p>
+              </div>
+              <div className="home-text-arrow-container">
+                <img className="home-text-arrow" src={arrow} />
+              </div>
             </this.HomeText>
           </Link>
         );
@@ -96,32 +107,17 @@ class HelloContainer extends React.Component<Props, State> {
     );
 
     return (
-      <div className="container">
+      <div className="main-container">
         <this.HomeHeader
           className="main-header"
           pose={homeHeaderVisible ? "visible" : "hidden"}
         >
           {homeData.header}
         </this.HomeHeader>
-        {homeComponent}
+        <div className="main-info-container">{homeComponent}</div>
       </div>
     );
   }
 }
 
-export function mapStateToProps({ playerID }: StoreState) {
-  return {
-    playerID
-  };
-}
-
-export function mapDispatchToProps(dispatch: Dispatch<actions.playerActions>) {
-  return {
-    setPlayerid: (playerID: string) => dispatch(actions.setPlayerid(playerID))
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HelloContainer);
+export default HelloContainer;

@@ -98,7 +98,6 @@ export default class Header extends React.Component<Props, State> {
         </this.MenuBox>
       );
     });
-    console.log(menuComponent);
 
     return <div className="header-menu-container">{menuComponent}</div>;
   }

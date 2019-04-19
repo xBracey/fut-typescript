@@ -4,6 +4,8 @@ const cors = require("cors");
 
 const playerArray = require("./data/fut.json");
 
+//Note to run this use forever NPM library
+
 // https://github.com/mysqljs/mysql
 const connection = mysql.createConnection({
   host: "localhost",
@@ -21,7 +23,7 @@ app.use(cors());
 app.get("/players", function(req, res) {
   const search = req.query.search ? req.query.search : "";
   connection.query(
-    `SELECT * FROM players WHERE Name LIKE '%${search}%' LIMIT 0,10`,
+    `SELECT * FROM players WHERE Name LIKE '%${search}%' LIMIT 0,11`,
     function(error, results, fields) {
       if (error) throw error;
       res.send(results);

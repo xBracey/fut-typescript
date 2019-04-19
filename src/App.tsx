@@ -2,6 +2,8 @@ import * as React from "react";
 import Main from "./containers/main";
 import Fut from "./containers/fut";
 import About from "./containers/about";
+import Projects from "./containers/projects";
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./index.css";
 import Header from "./components/header";
@@ -18,6 +20,7 @@ class App extends React.Component {
             <Route path="/" exact component={Main} />
             <Route path="/fut" exact component={Fut} />
             <Route path="/about" exact component={About} />
+            <Route path="/projects" exact component={Projects} />
           </div>
         </Router>
       </div>

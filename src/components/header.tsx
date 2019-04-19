@@ -2,6 +2,7 @@ import * as React from "react";
 import posed from "react-pose";
 import { Link } from "react-router-dom";
 import { MenuItemType } from "../types";
+import { headerData } from "../data/header";
 
 export interface Props {}
 
@@ -26,29 +27,6 @@ export default class Header extends React.Component<Props, State> {
       }, 400);
     }
   }
-
-  menu = [
-    {
-      link: "/",
-      name: "Home"
-    },
-    {
-      link: "/about",
-      name: "About Me"
-    },
-    {
-      link: "/",
-      name: ""
-    },
-    {
-      link: "/fut",
-      name: "Projects"
-    },
-    {
-      link: "/blog",
-      name: "Blog"
-    }
-  ];
 
   LogoBox = posed.div({
     hoverable: true,
@@ -85,7 +63,7 @@ export default class Header extends React.Component<Props, State> {
 
   renderMenu() {
     const { logoClicked } = this.state;
-    const menuComponent = this.menu.map((menuItem: MenuItemType) => {
+    const menuComponent = headerData.menu.map((menuItem: MenuItemType) => {
       const headerMenuEmpty = menuItem.name ? "" : "header-menu-empty";
       return (
         <this.MenuBox

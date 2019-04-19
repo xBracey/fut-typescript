@@ -1,0 +1,14 @@
+.project-info-container {
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.project-bullet-container {
+  width: calc(50% - 70px);
+  margin: 10px;
+  height: 100px;
+
+  @media (max-width: 767px) {
+    width: calc(100% - 70px);
+  }
+}

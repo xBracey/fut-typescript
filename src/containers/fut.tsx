@@ -85,10 +85,10 @@ class FutContainer extends React.Component<Props, State> {
     return data.length === 0 ? null : (
       <div className="list">
         <ul>
-          {data.map((player: PlayerType) => (
+          {data.map((player: PlayerType, index: number) => (
             <li
               onClick={() => this.onPlayerClicked(player.ID)}
-              className="single=player"
+              className={"single-player-" + (index % 2)}
             >
               {player.Name}
             </li>
@@ -127,8 +127,8 @@ class FutContainer extends React.Component<Props, State> {
     }
 
     return (
-      <div className="page-container">
-        <div className="container">
+      <div className="page-container fut-page-container">
+        <div className="container fut-input-container">
           <img src={logo} className="fut-logo" />
           <input
             onInput={(e: any) => {
@@ -138,7 +138,7 @@ class FutContainer extends React.Component<Props, State> {
           />
           {this.renderList()}
         </div>
-        <div className="container">
+        <div className="container fut-card-container">
           <div
             style={{ backgroundImage: `url(${photo})` }}
             className="card-photo"

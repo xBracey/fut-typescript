@@ -1,9 +1,33 @@
+.fut-page-container {
+  justify-content: center;
+}
+
 .fut-logo {
   height: 100px;
 }
 
 .list {
   text-align: center;
+  width: 100%;
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    padding: 3px;
+    width: 100%;
+  }
+}
+
+.single-player-0 {
+  background-color: $color-secondary-2-4;
+  color: $color-secondary-1-1;
+}
+
+.single-player-1 {
+  background-color: $color-secondary-2-1;
+  color: $color-secondary-1-4;
 }
 
 input {
@@ -103,4 +127,18 @@ p {
 .stats-sub-container {
   flex: 1;
   margin-left: 15px;
+}
+
+.fut-input-container {
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  background-color: $color-secondary-2-4;
+  color: $color-secondary-2-1;
+}
+
+.fut-card-container {
+  border-radius: 25px;
+  margin: 10px;
+  background-color: $color-secondary-1-4;
 }

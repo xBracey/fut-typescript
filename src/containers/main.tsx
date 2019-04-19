@@ -52,7 +52,7 @@ class HelloContainer extends React.Component<Props, State> {
     },
     visible: {
       opacity: "1",
-      margin: "0px 0px"
+      margin: "30px 0px"
     }
   });
 
@@ -87,12 +87,7 @@ class HelloContainer extends React.Component<Props, State> {
               pose={homeTextVisible[index] ? "visible" : "hidden"}
             >
               <div className="home-text-hover-container">
-                <div className="home-text-container">
-                  <p className="home-text">{description.hoverText}</p>
-                </div>
-                <div className="home-text-arrow-container">
-                  <img className="home-text-arrow" src={arrow} />
-                </div>
+                <p className="home-text">{description.hoverText}</p>
               </div>
               <div className="home-text-container">
                 <p className={"home-text"}>{description.text}</p>
